@@ -1,0 +1,78 @@
+
+public class Forma_Geometrica{
+	protected float base,altura;
+	Forma_Geometrica()//Construtor, inicializador. Não é obrigatório nesse caso//
+	{
+		base=0;// O construtor padrão ja inicializaria com 0 ambas variáveis//
+		altura=0;// O construtor padrão ja inicializaria com 0 ambas variáveis//
+	}
+	
+	public void set_forma(float a,float b)
+	{
+		this.altura=a;
+		this.base=b;
+	}
+	public float get_altura() 
+	{
+		return(altura);
+	}
+	public float get_base() 
+	{
+		return(base);
+	}
+}
+public class Retangulo extends Forma_Geometrica {
+	Retangulo()//Construtor. Não é obrigatório nesse caso//
+	{
+		//O construtor padrão da classe filha já chama o construtor da classe pai (ou super classe, em java)
+		super();//Chama o construtor da classe que deu origem a essa//
+	}
+	public float get_area_retangulo() 
+	{
+		return(altura*base);
+	}
+
+}
+
+public class Triangulo extends Retangulo {
+	Triangulo()//Construtor//
+	{
+		//O construtor padrão da classe filha já chama o construtor da classe pai (ou super classe, em java)
+		super();//Chama o construtor da classe que deu origem a essa//
+	}
+	public float get_area_triangulo() 
+	{
+		return((base*altura)/2);
+	}
+}
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+
+		
+		Scanner input= new Scanner(System.in);
+		System.out.println("Digite se se trata de um Triângulo ou um Retângulo");
+		String classe1=input.nextLine();
+		System.out.println("Digite respectiavemente a base e a altura do "+classe1+":");
+		float b=input.nextFloat();
+		float a=input.nextFloat();
+		input.close();
+		if((classe1.equals("Triângulo"))||(classe1.equals("triângulo"))||(classe1.equals("triangulo"))) 
+		{
+			
+			Triangulo triangle = new Triangulo();
+			triangle.set_forma(a, b);
+			System.out.println("A altura do triângulo é: "+triangle.get_area_triangulo());
+		}
+		
+		if((classe1.equals("Retângulo"))||(classe1.equals("retângulo"))||(classe1.equals("retangulo"))) 
+		{
+			
+			Retangulo rectangle = new Triangulo();
+			rectangle.set_forma(a, b);
+			System.out.println("A altura do retângulo é: "+rectangle.get_area_retangulo());
+		}
+	}
+
+}

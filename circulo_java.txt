@@ -1,0 +1,9 @@
+import java.util.Scanner;
+public class ex{
+	public static void main(String[] args) {
+		Scanner input = new Scanner (System.in);
+		float raio= input.nextFloat();
+		input.close();
+		System.out.println("Area = "+(raio*raio*Math.PI)+" Perimetro ="+(2*Math.PI*raio));
+	}
+}

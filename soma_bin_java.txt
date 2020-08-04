@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class ex{
+
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in);
+		System.out.println("Digite o primeiro binario");
+		String b1= input.nextLine();
+		System.out.println("Digite o segundo binario");
+		String b2= input.nextLine();
+		input.close();
+		int i1=Integer.parseInt(b1,2);//Binario 1, que está na base 2//
+		int i2=Integer.parseInt(b2,2);
+		int soma=i1+i2;
+		System.out.println("A soma em binário resulta"+(Integer.toBinaryString(soma)));
+		
+	}
+}	

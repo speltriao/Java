@@ -1,0 +1,17 @@
+
+import java.util.Scanner;
+public class soma {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.println("Digite o primeiro numero");
+		int a = input.nextInt();
+		System.out.println("Digite o segundo numero");
+		int b = input.nextInt();
+		input.close();
+		System.out.println("Resposta:"+(a+b));
+
+	}
+
+}
