@@ -63,7 +63,6 @@ public class Main {
         System.out.println("Digite o nome do arquivo que você busca (com a extensão): "); //Extensão = tipo de arquivo. Ex: arquivo.txt
         String nome = input();
         while(!isValidFileName(nome)) {
-            System.out.println(nome);
             System.out.println("Nome inválido! Arquivos não podem conter '/'");
             nome=input();
         }
