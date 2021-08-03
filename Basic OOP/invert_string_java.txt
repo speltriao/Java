@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class ex{
+
+	public static void main(String[] args) {
+		int i;
+		
+		System.out.println("Digite a string que será invertida");
+		Scanner input =new Scanner(System.in);
+		String entrada=input.nextLine();
+		input.close();
+		
+		for(i=(entrada.length()-1);i>=0;i--) 
+		{
+			System.out.print(entrada.charAt(i));
+		}
+
+	}
+}	
