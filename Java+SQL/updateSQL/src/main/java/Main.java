@@ -13,7 +13,7 @@ public class Main {
         try{
             con= DB.getConnection();
             pst = con.prepareStatement(//SQL COMMANDS
-                "UPDATE seller " //Always leave spaces after command string.
+                "UPDATE seller " //Always leave spaces after update command.
                     + "SET BaseSalary = BaseSalary + ? " //Increments base salary
                     + "WHERE " //Select the sellers to be updated
                     + "(DepartmentId = ?)" //Change all salaries from a given Department
