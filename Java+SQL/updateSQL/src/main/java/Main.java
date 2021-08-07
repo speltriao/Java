@@ -13,10 +13,14 @@ public class Main {
         try{
             con= DB.getConnection();
             pst = con.prepareStatement(//SQL COMMANDS
-                "UPDATE seller"
-                    + "SET BaseSalary = BaseSalary + ?" //Increments base salary
-                    + "WHERE" //Select the sellers to be updated
-            )
+                "UPDATE seller " //Always leave spaces after command string.
+                    + "SET BaseSalary = BaseSalary + ? " //Increments base salary
+                    + "WHERE " //Select the sellers to be updated
+                    + "(DepartmentId = ?)" //Change all salaries from a given Department
+            );
+
+            pst.setDouble(1,200.0); // Set BaseSalary (first ?) as 200.0
+            pst.setInt(2,2); //Set DepartmentId (second ?) as DepartmentId 2
 
             int rowsAffected = pst.executeUpdate(); //Execute the operation, return the number of affected
             System.out.println("Done! " + "Rows updated: "+ rowsAffected);
