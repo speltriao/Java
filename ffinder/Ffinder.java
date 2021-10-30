@@ -1,3 +1,4 @@
+//This program find files (recursively) on Linux//
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.Scanner;
