@@ -1,18 +1,18 @@
 package thread;
 
-import constant.Constant;
+import math.MathematicalConstant;
 
 public class CalculationThread extends Thread{
 
     private int numberOfTerms;
-    private Constant constant;
-    public CalculationThread(int numberOfTerms, Constant constant) {
+    private MathematicalConstant mathematicalConstant;
+    public CalculationThread(int numberOfTerms, MathematicalConstant mathematicalConstant) {
         this.numberOfTerms = numberOfTerms;
-        this.constant = constant;
+        this.mathematicalConstant = mathematicalConstant;
     }
 
     @Override
     public void run () {
-        constant.calculate(numberOfTerms);
+        mathematicalConstant.calculate(numberOfTerms);
     }
 }
