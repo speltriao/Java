@@ -5,7 +5,7 @@ import math.Pi;
 import init.Init;
 
 public class Main {
-    private static final int numberOfTerms = 60000;
+    private static final int numberOfTerms = 200000;
 
     private static void singleThread(){
         Pi pi = new Pi();
@@ -33,6 +33,6 @@ public class Main {
 
     public static void main(String[] args) {
         dualThread();
-        singleThread();
+        //singleThread();
     }
 }
