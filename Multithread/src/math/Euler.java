@@ -10,9 +10,13 @@ public class Euler extends MathematicalConstant {
         return fat;
     }
     @Override
-    public void calculate(int numberOfTerms) {
-        for (int i = 0; i < numberOfTerms; i++) {
-            value += (1.0 / (fatorial(i)));
+    public void calculate (int numberOfTerms) {
+        int den = 1, mult = 1;
+        for (int i = 0; i < numberOfTerms ; i++) {
+            value += (mult * (4.0/(den)));
+            den +=2;
+            mult *= -1;
         }
     }
 }
+
